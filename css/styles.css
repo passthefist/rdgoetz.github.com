@@ -203,6 +203,12 @@ body { background: #F3EFE0; font-size: 15px; line-height: 1.64; }
     text-align:center;
 }
 
+#sticky span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 36px;
+}
+
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -230,20 +236,26 @@ animation-delay: 0.5s;
 
 .fade-in.two {
 -webkit-animation-delay: 2s;
--moz-animation-delay:2s;
+-moz-animation-delay: 2s;
 animation-delay: 2s;
 }
 
 .fade-in.three {
--webkit-animation-delay: 2.3s;
--moz-animation-delay: 2.3s;
-animation-delay: 2.3s;
+-webkit-animation-delay: 3.5s;
+-moz-animation-delay:3.5s;
+animation-delay: 3.5s;
 }
 
 .fade-in.four {
--webkit-animation-delay: 4s;
--moz-animation-delay: 4s;
-animation-delay: 4s;
+-webkit-animation-delay: 5s;
+-moz-animation-delay: 5s;
+animation-delay: 5s;
+}
+
+.fade-in.five {
+-webkit-animation-delay: 5s;
+-moz-animation-delay: 5s;
+animation-delay: 5s;
 }
 
 a.button {
@@ -319,9 +331,9 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
     -moz-animation-duration:4.5s;
     animation-duration:4.5s;
 
-    -webkit-animation-delay: 3.5s;
-    -moz-animation-delay: 3.5s;
-    animation-delay: 3.5s;
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s;
     height:2000px;
 }
 
@@ -346,6 +358,14 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 #experiences .experience .experience-details { display: block; margin-top: 6px; }
 #experiences .experience .experience-details * { color: #22A39F; }
 #experiences .experience .experience-details .seperator { color: #BCBCBC; }
+
+#experiences .work-details {
+    font-size:13px;
+}
+
+#experiences .work-details ul {
+    list-style: square;
+}
 
 #abilities ul > li { min-height: 30px; padding: 3px 0px; }
 #abilities ul > li:hover { background: #F2F2F2; }
@@ -445,20 +465,11 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 	background:url('https://s3.amazonaws.com/onepagelove/one-page-love-award.png') no-repeat;
 }
 
-@media (max-width: 1200px) { 
+@media (screen and max-width: 1200px) { 
 	#interests .interest-content { padding: 20px 0px; }
 }
 
-@media (max-width: 767px) { 
-	.jumbotron:before {
-		bottom: 100px;
-		left: 20px;
-		right: 20px;
-		top: 20px;		
-	}
-	.jumbotron .container { top: 20%; padding-top: 0px; }
-	.jumbotron .scroll-down { width: 100%; right: 0px; }
-	
+@media (screen and max-width: 767px) { 
 	.navbar  { left: 0px; width: 100%; }
 	.navbar .nav > li { height: 60px; }
 	.navbar .nav > li a { height: 60px; text-align: center; padding-top: 20px; font-weight: 600; color: #FFFFFF; }
@@ -486,37 +497,6 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 	#contact a .icon { float: left; margin-right: 10px; }
 }    
 
-@media only screen and (orientation: portrait) and (max-width: 767px)  {
-    .jumbotron {
-      -webkit-background-size: auto 150%;
-      background-attachment: scroll;
-    }
-}
-@media only screen and (orientation: landscape) and (max-width: 767px)  {
-
-    .jumbotron {
-      -webkit-background-size: 150% auto;
-      background-attachment: scroll;
-    }
-	
-	.jumbotron .lead { display: none; }
-}
-
-@keyframes wiggle {
-	0% {
-		padding-top: 20px;
-	}
-
-	50% {
-		padding-top: 28px;
-	}
-
-	100% {
-		padding-top: 20px;
-	}
-}
-
-
 /*---------------*/
 /***** EFFECT *****/
 /*---------------*/
@@ -529,18 +509,22 @@ figure.effect {
 figure.effect img {
 	width: -webkit-calc(100% + 20px);
 	width: calc(100% + 20px);
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transition: opacity 0.35s, filter 0.35s, -webkit-filter 0.35s,  -webkit-transform 0.35s;
+	transition: opacity 0.35s, filter 0.35s, -webkit-filter 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(-10px,0,0);
 	transform: translate3d(-10px,0,0);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
 }
 
 figure.effect:hover img {
 	opacity: 0.2;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
 }
 
 figure.effect figcaption {
@@ -552,7 +536,7 @@ figure.effect h3 {
 	overflow: hidden;
 	padding-bottom: 20px;
 	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	-webkit-transition: opacity 0.35s -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 }
 
@@ -592,8 +576,4 @@ figure.effect:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-}
-
-.work-details {
-    font-size:13px;
 }

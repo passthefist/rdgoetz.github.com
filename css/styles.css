@@ -258,6 +258,29 @@ animation-delay: 5s;
 animation-delay: 5s;
 }
 
+@-webkit-keyframes slideUp { from { height:2000px;} to { height:340px;} }
+@-moz-keyframes slideUp { from { height:2000px;} to { height:340px;} }
+@keyframes slideUp { from { height:2000px;} to { height:340px;} }
+
+#profile.slide-up {
+    -webkit-animation:slideUp cubic-bezier(0.39, 0.58, 0.57, 1) 1; 
+    -moz-animation:slideUp cubic-bezier(0.39, 0.58, 0.57, 1) 1;
+    animation:slideUp cubic-bezier(0.39, 0.58, 0.57, 1) 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:4.5s;
+    -moz-animation-duration:4.5s;
+    animation-duration:4.5s;
+
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s;
+    height:2000px;
+}
+
 a.button {
     text-decoration: none;
 }
@@ -312,30 +335,6 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 .background-white { background: #FFFFFF; }
 .background-gray { background: #434242; }
 .container { max-width: 1280px; padding: 40px 180px; }
-
-
-@-webkit-keyframes slideUp { from { height:2000px;} to { height:340px;} }
-@-moz-keyframes slideUp { from { height:2000px;} to { height:340px;} }
-@keyframes slideUp { from { height:2000px;} to { height:340px;} }
-
-#profile.slide-up {
-    -webkit-animation:slideUp cubic-bezier(0.39, 0.58, 0.57, 1) 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:slideUp cubic-bezier(0.39, 0.58, 0.57, 1) 1
-    animation:slideUp cubic-bezier(0.39, 0.58, 0.57, 1) 1;
-
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-
-    -webkit-animation-duration:4.5s;
-    -moz-animation-duration:4.5s;
-    animation-duration:4.5s;
-
-    -webkit-animation-delay: 3s;
-    -moz-animation-delay: 3s;
-    animation-delay: 3s;
-    height:2000px;
-}
 
 #profile .row > div { margin-bottom: 20px; }
 #profile .row > div .image { width: 100%; width: 220px; height: 220px; display:inline-block;}

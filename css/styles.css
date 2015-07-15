@@ -362,7 +362,7 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
     font-size:13px;
 }
 
-#experiences .work-details ul {
+.work-details ul {
     list-style: square;
 }
 
@@ -477,7 +477,7 @@ hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity
 	
 	.container { padding: 60px 20px; min-width: 280px; }
 	.hidden-phone { display: none; }
-	.hidden-phone ul { display: none; }
+	ul.hidden-phone { display: none; }
 	.hidden-phone li { display: none; }
 	
 	#profile .row * { text-align: center; }

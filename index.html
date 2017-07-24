@@ -13,6 +13,9 @@
     <body data-spy="scroll" data-target="#navbar-example" data-twttr-rendered="true" class="fixed">
         <div class="background-white">
             <div id="profile" class="container slide-up">
+                <div class = 'row text-center' id="print-only-span">
+                    <h4>This CV is best viewed online at <a href="rdgoetz.github.io"></a></h4>
+                </div>
                 <h2 class ="fade-in one">Robert Goetz</h2>
                 <p class="lead"><span class="fade-in two">Jack of all trades,</span> <span class="fade-in three">pretty decent at most</span></p>
                 <hr class="fade-in four">
@@ -32,7 +35,7 @@
                     <div class="col-md-4">
                         <h4>Iowa State University</h4>
                         <p class="experience-period">
-                            Aug 2007 - Dec 2011	
+                            Aug 2007 - Dec 2011
                         </p>
                     </div>
                     <div class="col-md-8">
@@ -53,9 +56,47 @@
             <div class="experiences">
                 <div class="experience row">
                     <div class="col-md-4">
+                        <h4>Better World Collective</h4>
+                        <p class="experience-period">
+                            Sep 2015 - present
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <p>
+                            <strong>Full Stack Web Developer</strong>
+                            <span class="experience-details">
+                            <span class="description">Early Stage Startup</span>
+                            <span class="seperator">|</span>
+                            <span class="location">
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                            Remote
+                            </span>
+                            <span class="seperator">|</span>
+                            <span class="link">
+                            <span class="glyphicon glyphicon-link"></span>
+                            <a href="http://www.betterworldcollective.com/" target="_blank">www.betterworldcollective.com</a>
+                            </span>
+                            </span>
+                            </span>
+                        <div class="hidden-phone work-details">
+                            <ul class="hidden-phone">
+                                <li><strong>First engineering hire covering product and dev roles</strong></li>
+                                <li>Modernized workflow, automated test infrastructure and dependency management</li>
+                                <li>Built event ticketing platform</li>
+                                <li>Automated payout systems to non-profits, including paper checks sent via mail</li>
+                                <li>Created referral program and required systems</li>
+                                <li>Built adminstrative tools for both internal admins and customers</li>
+                                <li>Added event tracking to optimize sales/signup flows</li>
+                            </ul>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="experience row">
+                    <div class="col-md-4">
                         <h4>if(we) (formerly Tagged)</h4>
                         <p class="experience-period">
-                            Apr 2012 - present
+                            Apr 2012 - Aug 2015
                         </p>
                     </div>
                     <div class="col-md-8">
@@ -212,7 +253,7 @@
                         <img src="./img/spacegame.png" alt="Spacegame!">
                         <figcaption>
                             <h3>Space Game</h3>
-                            <p>In Progress. Working on an in-browser p2p multiplayer space shooter game</p>
+                            <p>Experimental in-browser p2p multiplayer space shooter game to test the real time data capabilities of WebRTC</p>
                             <a href="http://rdgoetz.github.io/spacegame/" target="_blank">View more</a>
                             <span class="icon">
                             <span class="glyphicon glyphicon-new-window"></span>
@@ -274,7 +315,7 @@
                             <li>
                                 <a href="http://www.github.com/rdgoetz" target="_blank">
                                 <span class="icon icon-twitter"></span>
-                                rdgoetz	
+                                rdgoetz
                                 </a>
                             </li>
                             <li>
@@ -310,7 +351,7 @@
             /*  var _gaq = _gaq || [];
               _gaq.push(['_setAccount', 'UA-3361587-8']);
               _gaq.push(['_trackPageview']);
-            
+
               (function() {
                     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
                     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
